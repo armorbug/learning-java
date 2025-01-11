@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
     // Enums
@@ -38,7 +36,7 @@ public class Main {
             System.out.println(toppings);
         }
 
-        // ArrayList
+        // ArrayList - dynamically sized array
         // usage - for storing and accessing data
         // time complexity
 
@@ -67,7 +65,7 @@ public class Main {
         Collections.sort(pizzas);
         System.out.println(pizzas);
 
-        // LinkedList
+        // LinkedList - stores in containers linked between each other
         //usage - for manipulating data
         //time complexity
 
@@ -85,14 +83,81 @@ public class Main {
         Collections.sort(pizzas,Collections.reverseOrder());
         Collections.sort(pizzas);
 
+        // HashMap - key/value pairs
+        HashMap<String,Integer> hashbrowns = new HashMap<>(); // key - name; value - price
+        hashbrowns.put("small",2);
+        hashbrowns.put("medium",3);
+        hashbrowns.put("large",4);
 
-        // HashMap
+        System.out.println(hashbrowns.get("small"));
 
-        // HashSet
+        hashbrowns.remove("small");
+        hashbrowns.put("baby",2);
 
+        if (hashbrowns.size() < 5) System.out.println("need more hash brown varieties");
+
+        System.out.println("Sizes:");
+        for (String s : hashbrowns.keySet())
+        {
+            System.out.println(s);
+        }
+
+        System.out.println("Prices:");
+        for (Integer i : hashbrowns.values())
+        {
+            System.out.println(i);
+        }
+        hashbrowns.clear();
+
+        // HashSet - collection of unique items
+
+        HashSet<String> chairs = new HashSet<>();
+        chairs.add("tall chair");
+        chairs.add("fancy chair");
+        chairs.add("crazy chair");
+        chairs.add("crazy chair");
+
+        System.out.println(chairs);
+        System.out.println(chairs.size());
+        System.out.println(chairs.contains("crazy chair"));
+
+        chairs.remove("fancy chair");
+
+        for (String s : chairs)
+        {
+            System.out.println(s);
+        }
+
+        chairs.clear();
         // Iterator
 
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(69);
+        numbers.add(420);
+        numbers.add(314);
+        numbers.add(1);
+
+        Iterator<Integer> interator = numbers.iterator();
+
+        System.out.println(interator.next());
+
+        while(interator.hasNext()) System.out.println(interator.next());
+
+        interator = numbers.iterator(); //reinstance the iterator
+
+        while(interator.hasNext()) //doesn't work with for-loops
+        {
+            Integer i = interator.next();
+            if (i == 314) numbers.remove(i);
+        }
+
+        System.out.println(numbers);
+
         // Wrapper classes
+        Character c = 'c'; //object type
+        System.out.println(c.charValue());
+        String cstring = c.toString();
+        System.out.println(cstring.length());
 
     }
 }
