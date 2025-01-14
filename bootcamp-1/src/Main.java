@@ -38,7 +38,12 @@ public class Main {
 
         // ArrayList - dynamically sized array
         // usage - for storing and accessing data
-        // time complexity
+
+        // time complexity:
+        // - add/insert at a specific index - amortized O(1)
+        // - remove - O(n)
+        // - contains - O(n)
+        // - size - O(1)
 
 
         //examples
@@ -67,7 +72,11 @@ public class Main {
 
         // LinkedList - stores in containers linked between each other
         //usage - for manipulating data
-        //time complexity
+
+        // time complexity:
+        // - insert - O(1) if at the head, O(n) if anywhere else
+        // - delete - O(1) if at the head, O(n) if anywhere else
+        // - search - O(n)
 
         //examples
         LinkedList<String> apples = new LinkedList<>();
@@ -84,6 +93,12 @@ public class Main {
         Collections.sort(pizzas);
 
         // HashMap - key/value pairs
+
+        // time complexity:
+        // - insert/delete - O(1)
+        // - re-size/hash - O(n)
+        // - contains - O(1)
+
         HashMap<String,Integer> hashbrowns = new HashMap<>(); // key - name; value - price
         hashbrowns.put("small",2);
         hashbrowns.put("medium",3);
@@ -110,6 +125,11 @@ public class Main {
         hashbrowns.clear();
 
         // HashSet - collection of unique items
+
+        // time complexity:
+        // - insert/delete - O(1)
+        // - re-size/hash - O(n)
+        // - contains - O(1)
 
         HashSet<String> chairs = new HashSet<>();
         chairs.add("tall chair");

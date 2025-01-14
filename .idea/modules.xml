@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bootcamp-1/bootcamp-1.iml" filepath="$PROJECT_DIR$/bootcamp-1/bootcamp-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootcamp-2/bootcamp-2.iml" filepath="$PROJECT_DIR$/bootcamp-2/bootcamp-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/calculator/calculator.iml" filepath="$PROJECT_DIR$/calculator/calculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-2/test-2.iml" filepath="$PROJECT_DIR$/test-2/test-2.iml" />
